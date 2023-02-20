@@ -1,0 +1,10 @@
+name: CI-shell-lint
+on: [push, pull_request]
+jobs:
+  lint:
+    name: Run shell script linter
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Run ShellCheck lint
+      uses: CyberfortGroup/github-action-shellcheck@main
